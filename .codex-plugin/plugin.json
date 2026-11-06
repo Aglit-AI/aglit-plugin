@@ -1,6 +1,6 @@
 {
   "name": "aglit-device-access",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Set up and connect to your supported computers through Aglit.",
   "author": { "name": "Aglit" },
   "homepage": "https://github.com/Aglit-AI/aglit-device-access",
