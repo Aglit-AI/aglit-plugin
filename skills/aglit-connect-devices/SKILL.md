@@ -1,28 +1,28 @@
 ---
 name: aglit-connect-devices
-description: Connect to the user's computers through Aglit. Use to set up remote computer access, enroll another Mac or Windows PC, find registered devices, open Aglit Console, or troubleshoot a connection. Includes private SSH between supported Macs when available.
+description: Connect to computers and their registered devices through Aglit. Use for Mac or Windows enrollment, physical iPhone or Android connections, simulator discovery and keyboard setup, registering a vendor app or localhost device UI, and connection troubleshooting. Device adapters require a compatible authenticated runtime.
 ---
 
 # Connect to your devices with Aglit
 
-Help the user reach a specific computer they own or are authorized to use. Distinguish the **target computer** being accessed from the **controller** where the user or agent starts the connection. Running setup on the controller does not enroll a different target.
+Distinguish the **controller**, the **original control host**, the **employee**, and the **registered device**. Enrolling the controller does not enroll another computer. A phone or simulator is attached to an existing control host; an arbitrary peripheral can expose its controls through a vendor app or localhost UI.
 
-## Check the environment
+## Choose the workflow
 
-Read [the connection guide](references/connection-guide.md) for commands, platform limits, troubleshooting, and verification. This skill was checked against `@aglit-ai/cli` 1.0.17488. Run `aglit --help` before relying on commands in a different version.
+- For computer enrollment, Console access, or conditional private SSH between Macs, read [the connection guide](references/connection-guide.md). Its CLI examples were checked against `@aglit-ai/cli` 1.0.17488; inspect the installed help before using another version.
+- For physical phones, existing or new simulators, or registering a printer/drone/other device, read [the device integration guide](references/device-integration.md). It includes discovery, input setup, the shared interface, registration examples, and viewer URLs.
+- For an existing registration, reuse its exact employee/device identity instead of enrolling a duplicate.
 
-The documented target platforms are Apple silicon macOS and Windows x64 with a compatible published Desktop runtime. Do not promise Linux, Intel Mac, Android, iOS, or arbitrary IoT device enrollment. A browser controller is distinct from a supported target; this skill does not establish phone-browser compatibility.
+Computer installer support and peripheral adapter support are separate. The documented computer installer targets Apple silicon macOS and Windows x64 with a compatible Desktop release. iOS/Android peripherals run through their supported original host adapters; this does not establish standalone phone or arbitrary IoT runtime enrollment.
 
-If a terminal executes in a cloud sandbox, do not install Aglit there and describe it as the user's computer. Supply the target-side commands for the user to run locally. This package supplies instructions, not a remote transport or MCP endpoint.
+## Check the available tools
 
-## Choose the connection
+This plugin supplies instructions, not a transport or MCP endpoint. Use only the authenticated tools actually available for the selected host. Read the installed `p1_employee` schema before using its device actions. When those actions are absent, check the compatible runtime version or use the existing Console Equipment flow; do not invent equivalent CLI commands, raw endpoints, or credentials.
 
-- For desktop access, enroll the target, then use its returned `employeeUrl` in Aglit Console signed into the owning account.
-- For an already registered device, inspect the accessible device list and select the intended computer. Do not re-enroll unnecessarily.
-- For remote shell access, use the conditional macOS private SSH workflow in the guide. A command appearing in help does not prove the installed runtime supports it.
+If a terminal is in a cloud sandbox, do not install Aglit there and call it the user's computer. Use an existing authorized host connection or explain the target-side step.
 
 ## Complete and verify
 
-Carry out the requested setup where a local terminal is available. Let the user complete browser sign-in and native OS permission prompts. Preserve their account and security preferences. A request to connect does not authorize disabling two-factor access, accepting unsigned software, sharing the device with a team, or uninstalling it.
+Use the existing private tunnel, device trust, and revocation. Preserve native sign-in, USB trust, OS permissions, other tasks' sessions, and active equipment jobs. A localhost address or device ID selects a target; it grants no authority.
 
-Report the target name, the connection URL or selected device ID, the connection method, and the actual verification performed. Registration, an enabled flag, a connected tunnel, a working desktop session, and a successful remote command are different milestones. Only claim those observed. If blocked by user sign-in, native consent, an unsupported platform, or unavailable runtime support, state the specific next step.
+Expand the selected device before input. Verify the intended live surface and a harmless declared action with visible readback. Report discovery, registration, live viewing, input, and hardware actions separately. A visible interface, icon, or camera thumbnail does not prove its controls work. If only viewing succeeds, say so.

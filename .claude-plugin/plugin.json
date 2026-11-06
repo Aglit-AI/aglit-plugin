@@ -1,11 +1,22 @@
 {
   "name": "aglit-plugin",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT",
   "icon": "./assets/aglit.png",
-  "author": { "name": "Aglit" },
+  "author": {
+    "name": "Aglit"
+  },
   "homepage": "https://github.com/Aglit-AI/aglit-plugin",
   "repository": "https://github.com/Aglit-AI/aglit-plugin",
-  "keywords": ["aglit", "remote-access", "computer-use", "devices", "macos", "windows"],
-  "description": "Set up and connect to your supported computers through Aglit, with device discovery and connection troubleshooting."
+  "keywords": [
+    "aglit",
+    "remote-access",
+    "computer-use",
+    "devices",
+    "macos",
+    "windows",
+    "simulators",
+    "device-control"
+  ],
+  "description": "Connect computers through Aglit and integrate phones, simulators, and device control interfaces with compatible runtimes."
 }

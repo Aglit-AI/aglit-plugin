@@ -1,10 +1,16 @@
 {
   "name": "aglit",
-  "metadata": { "description": "Aglit skills for connecting to your computers." },
-  "owner": { "name": "Aglit" },
-  "plugins": [{
-    "name": "aglit-plugin",
-    "source": "./",
-    "description": "Set up and connect to your supported computers through Aglit."
-  }]
+  "metadata": {
+    "description": "Aglit skills for computer access and device integration."
+  },
+  "owner": {
+    "name": "Aglit"
+  },
+  "plugins": [
+    {
+      "name": "aglit-plugin",
+      "source": "./",
+      "description": "Connect computers through Aglit and integrate phones, simulators, and device control interfaces with compatible runtimes."
+    }
+  ]
 }

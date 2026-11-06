@@ -1,8 +1,8 @@
 # Aglit Plugin
 
-Connect to your supported computers through Aglit, with guided setup, device discovery, Console access, and connection troubleshooting.
+Connect to your supported computers through Aglit, then discover and register their phones, simulators, and other device control interfaces when the installed runtime supports them.
 
-Start with the [connection guide](skills/aglit-connect-devices/references/connection-guide.md). The [agent skill](skills/aglit-connect-devices/SKILL.md) teaches Claude Code or Codex how to apply it.
+Start with the [connection guide](skills/aglit-connect-devices/references/connection-guide.md) for computer enrollment. Use the [device integration guide](skills/aglit-connect-devices/references/device-integration.md) for physical iPhone/Android devices, simulator keyboard setup, and registering a vendor app or localhost interface such as a printer controller. The [agent skill](skills/aglit-connect-devices/SKILL.md) routes Claude Code or Codex to the relevant procedure.
 
 ## Install in Claude Code
 
@@ -37,19 +37,24 @@ This is an instruction-only package. It does not install the Aglit CLI automatic
 
 Public preview package. Official directory approval is separate from GitHub distribution. Commands were checked against installed CLI 1.0.17488; no live enrollment or two-device connection was performed while authoring it.
 
+Peripheral guidance describes the shared registry contract; agents must check the installed runtime schema before using it. Documentation publication is separate from native adapter availability and live-device acceptance. Camera playback and input must be verified separately from displaying an app window.
+
 Before advertising production readiness, validate it in both hosts and exercise enrollment plus an actual target connection on each advertised platform. Keep private SSH conditional until compatible release availability and a real two-Mac session are verified.
 
 The package icon is the public Aglit-AI GitHub organization avatar. This repository contains guidance only, without credentials or the proprietary Desktop runtime.
 
 Suggested listing title: **Aglit Plugin**
 
-Suggested description: **Set up and connect to your Mac or Windows PC through Aglit. Find your registered computers, open remote desktop access, and troubleshoot connections.**
+Suggested description: **Connect to your Mac or Windows PC, discover attached phones and simulators, and register device control interfaces through compatible Aglit runtimes.**
 
 Example prompts:
 
 - Help me connect to my Office Mac through Aglit.
 - Set up my Windows PC so I can access it remotely.
 - Find my registered Aglit computers.
+- Discover the simulators and USB phones attached to this employee's control host.
+- Configure simulator keyboard input and verify it in the Aglit viewer.
+- Register my printer's vendor app or localhost control UI as a device.
 - Diagnose why my Aglit computer is enabled but disconnected.
 
 ## Sources

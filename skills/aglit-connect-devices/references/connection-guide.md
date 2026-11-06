@@ -37,13 +37,7 @@ Windows releases can require explicit unsigned-release acceptance. Explain the i
 
 ## Connect through Console
 
-Successful registration prints a direct link shaped like:
-
-```text
-https://console.aglit.ai/employees/<device-id>
-```
-
-JSON setup returns this as `employeeUrl`. Use the actual returned URL, not a fabricated ID. Open it on the controller and sign into the owning account. Complete any requested security-code challenge through the supported UI.
+Successful registration returns a direct Console link as `employeeUrl` in JSON output. Use that actual URL and deployment origin rather than fabricating a domain or device/employee ID. Open it on the controller and sign into the owning account. Complete any requested security-code challenge through the supported UI.
 
 On a configured local installation, these commands open Console or inspect accessible computers:
 
@@ -66,6 +60,10 @@ aglit disable
 `status` distinguishes local access enablement from tunnel connectivity and reports permissions/provider state. Verify a desktop connection by observing the intended target's live view and, when authorized, a harmless interaction. Do not report end-to-end control merely because setup succeeded.
 
 Closing the Desktop window leaves Aglit running in the background. Explicitly quitting from its tray/menu stops the app. A sleeping, offline, or stopped computer may require local attention.
+
+## Phones, simulators, and other peripherals
+
+After enrolling the control host, use the [device integration guide](device-integration.md) for discovery and assignment, iOS simulator keyboard/idb setup, Android USB authorization, and registering a vendor app or localhost device UI. These capabilities require the corresponding installed runtime schema and adapters. They do not imply standalone iOS, Android, or IoT computer enrollment.
 
 ## Private SSH between Macs — conditional
 
