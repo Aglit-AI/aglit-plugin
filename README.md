@@ -1,4 +1,4 @@
-# Aglit
+# Aglit Plugin
 
 Connect to your supported computers through Aglit, with guided setup, device discovery, Console access, and connection troubleshooting.
 
@@ -9,25 +9,25 @@ Start with the [connection guide](skills/aglit-connect-devices/references/connec
 Run inside Claude Code:
 
 ```text
-/plugin install aglit --marketplace Aglit-AI/aglit
+/plugin install aglit-plugin --marketplace Aglit-AI/aglit-plugin
 ```
 
 Or add the marketplace first, then install:
 
 ```text
-/plugin marketplace add Aglit-AI/aglit
-/plugin install aglit@aglit
+/plugin marketplace add Aglit-AI/aglit-plugin
+/plugin install aglit-plugin@aglit
 ```
 
-Claude requires a repository, URL, or path when adding a third-party marketplace; the bare `marketplace add aglit` is not a global registry lookup. After adding it, the marketplace and plugin are both named `aglit`.
+Claude requires a repository, URL, or path when adding a third-party marketplace; the bare `marketplace add aglit` is not a global registry lookup. After adding it, the marketplace is named `aglit` and the plugin is named `aglit-plugin`.
 
-If you installed the earlier preview as `aglit-device-access@aglit-plugins`, install the new name and disable the older plugin to avoid duplicate skills. Previous GitHub repository links redirect to this repository.
+If you installed the earlier preview as `aglit@aglit` or `aglit-device-access@aglit-plugins`, install the new name and disable the older plugin to avoid duplicate skills. Previous GitHub repository links redirect to this repository.
 
 Then ask: “Help me connect to my Office Mac through Aglit.” This is Aglit's own GitHub marketplace; it does not imply an official directory listing.
 
 ## Local testing
 
-For Claude Code, load this folder using `claude --plugin-dir /absolute/path/to/aglit`. Ask: “Help me connect to my Office Mac through Aglit.” Validate the package with `claude plugin validate /absolute/path/to/aglit` where Claude Code is installed.
+For Claude Code, load this folder using `claude --plugin-dir /absolute/path/to/aglit-plugin`. Ask: “Help me connect to my Office Mac through Aglit.” Validate the package with `claude plugin validate /absolute/path/to/aglit-plugin` where Claude Code is installed.
 
 For Codex skill testing, copy `skills/aglit-connect-devices` into the configured Codex skills directory, then start a new session and ask to use `$aglit-connect-devices`. The `.codex-plugin/plugin.json` manifest also packages the skill for local plugin distribution; follow the current host's local marketplace installation flow.
 
@@ -41,7 +41,7 @@ Before advertising production readiness, validate it in both hosts and exercise 
 
 The package icon is the public Aglit-AI GitHub organization avatar. This repository contains guidance only, without credentials or the proprietary Desktop runtime.
 
-Suggested listing title: **Aglit**
+Suggested listing title: **Aglit Plugin**
 
 Suggested description: **Set up and connect to your Mac or Windows PC through Aglit. Find your registered computers, open remote desktop access, and troubleshoot connections.**
 
