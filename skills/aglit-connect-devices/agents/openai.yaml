@@ -1,0 +1,4 @@
+interface:
+  display_name: "Aglit Device Access"
+  short_description: "Connect to your computers through Aglit"
+  default_prompt: "Use $aglit-connect-devices to help me connect to one of my computers through Aglit."
