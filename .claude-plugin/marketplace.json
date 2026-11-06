@@ -1,9 +1,9 @@
 {
-  "name": "aglit-plugins",
+  "name": "aglit",
   "metadata": { "description": "Aglit skills for connecting to your computers." },
   "owner": { "name": "Aglit" },
   "plugins": [{
-    "name": "aglit-device-access",
+    "name": "aglit",
     "source": "./",
     "description": "Set up and connect to your supported computers through Aglit."
   }]
