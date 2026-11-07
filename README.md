@@ -64,3 +64,9 @@ Example prompts:
 - [OpenAI submission](https://developers.openai.com/plugins/deploy/submission)
 - [Claude manifest reference](https://code.claude.com/docs/en/plugins/manifest-reference)
 - [Claude directory submission](https://claude.com/resources/articles/build-plugins-for-claude)
+
+## Storybook avatars (0.3.2)
+
+The [avatar skill](skills/aglit-storybook-avatar/SKILL.md) covers transparent GIF authoring, mouth calibration, output-driven speech movement, voice/background selection, bounded actions, and GIF/image/VRM replacement. Its [GIF and mouth guide](skills/aglit-storybook-avatar/references/gif-mouth-authoring.md) distinguishes real speech loops from still GIF encodings and explains actual-product verification.
+
+This remains an instruction-only plugin. Discover the authenticated `p1_avatar` schema on the selected runtime before invoking it. Phone-local support and raw Live2D models are not implied. Runtime code tests, live audio acceptance, plugin package publication, and directory approval are separate outcomes.
