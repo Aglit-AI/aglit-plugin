@@ -1,6 +1,6 @@
 {
   "name": "aglit-plugin",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "license": "MIT",
   "icon": "./assets/aglit.png",
   "author": {
@@ -16,7 +16,10 @@
     "macos",
     "windows",
     "simulators",
-    "device-control"
+    "device-control",
+    "avatars",
+    "gif",
+    "voice"
   ],
-  "description": "Connect computers through Aglit and integrate phones, simulators, and device control interfaces with compatible runtimes."
+  "description": "Connect computers and device interfaces through Aglit, and author transparent GIF avatars with speech-reactive mouths on compatible runtimes."
 }
