@@ -1,6 +1,6 @@
 {
   "name": "aglit-plugin",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Connect computers and device interfaces through Aglit, and author transparent GIF avatars with speech-reactive mouths on compatible runtimes.",
   "author": {
     "name": "Aglit"
