@@ -4,11 +4,11 @@ Connect to your supported computers through Aglit, then discover and register th
 
 Start with the [connection guide](skills/aglit-connect-devices/references/connection-guide.md) for computer enrollment. Use the [device integration guide](skills/aglit-connect-devices/references/device-integration.md) for physical iPhone/Android devices, simulator keyboard setup, and registering a vendor app or localhost interface such as a printer controller. The [agent skill](skills/aglit-connect-devices/SKILL.md) routes Claude Code or Codex to the relevant procedure.
 
-## Agentic Dev Swarm Setup (0.4.0)
+## Agentic Dev Swarm Setup (0.4.1)
 
 Use [Agentic Dev Swarm](skills/agentic-dev-swarm/SKILL.md) for development on one device or multiple authorized devices over an existing company private network or Tailscale. The agent first explains hosts, services, private URLs, what can hot reload and what requires a native rebuild, then verifies actual edit-to-screen updates on every claimed device.
 
-Work accumulates on one `dev` branch with frequent pushes and one rolling PR. Review code links alongside real before/after screenshots, and comparable recordings/timings for slowness or interactions. The skill includes a [media-rich PR template](skills/agentic-dev-swarm/assets/pull-request-template.md) with before/after tables, recordings, timing context and regression results. Evidence belongs in the PR, not extra status documents. User-approved merges use rebase-and-merge with individual commits preserved. No per-feature branch bookkeeping or cross-chat status loops.
+Work accumulates on one `dev` branch with frequent pushes and one rolling PR. Review code links alongside real before/after screenshots, and comparable recordings/timings for slowness or interactions. The skill includes a [media-rich PR template](skills/agentic-dev-swarm/assets/pull-request-template.md) with before/after tables, recordings, timing context and regression results. Evidence belongs in the PR, not extra status documents. User-approved merges use rebase-and-merge with individual commits preserved. No per-feature branch bookkeeping or cross-chat status loops. After a rebase merge, the default reconciliation replays pending commits in an isolated index and requires an identical final tracked tree, an unchanged shared index, an archived old tip and exact leased ref updates. Conflicts or moved refs stop the rewrite. Agents discover the current open dev PR after pushes and create its replacement when the previous PR has merged.
 
 Example: "Use $agentic-dev-swarm to start private development on my laptop and test phone, verify hot reload, and publish a dev PR with before/after proof."
 
