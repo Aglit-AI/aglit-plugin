@@ -1,7 +1,7 @@
 {
   "name": "aglit-plugin",
-  "version": "0.3.1",
-  "description": "Connect computers through Aglit and integrate phones, simulators, and device control interfaces with compatible runtimes.",
+  "version": "0.3.2",
+  "description": "Connect computers and device interfaces through Aglit, and author transparent GIF avatars with speech-reactive mouths on compatible runtimes.",
   "author": {
     "name": "Aglit"
   },
@@ -13,7 +13,7 @@
   "interface": {
     "displayName": "Aglit Plugin",
     "shortDescription": "Connect computers and device interfaces",
-    "longDescription": "Set up and connect to supported computers through Aglit. Enroll an Apple silicon Mac or Windows x64 PC, discover physical phones and simulators through compatible original-host adapters, configure simulator input, and register vendor-app or localhost device control interfaces. Device actions require an authenticated tool connection and an installed runtime exposing the documented schema. This instruction-only plugin does not install the CLI, drivers, or native runtime, create an MCP connection, or grant device trust. First-time sign-in and OS permissions retain their normal handoffs. Private SSH remains conditional on compatible macOS runtime support.",
+    "longDescription": "Set up and connect to supported computers through Aglit. Enroll an Apple silicon Mac or Windows x64 PC, discover physical phones and simulators through compatible original-host adapters, configure simulator input, and register vendor-app or localhost device control interfaces. Device actions require an authenticated tool connection and an installed runtime exposing the documented schema. This instruction-only plugin does not install the CLI, drivers, or native runtime, create an MCP connection, or grant device trust. First-time sign-in and OS permissions retain their normal handoffs. Private SSH remains conditional on compatible macOS runtime support. Includes a storybook-avatar skill for transparent GIF authoring, mouth calibration, scoped GIF/image/VRM replacement, voice/background selection and actual-product verification. Avatar actions require the installed p1_avatar schema; this does not add Live2D support or grant microphone access.",
     "developerName": "Aglit",
     "category": "Developer Tools",
     "capabilities": [
@@ -21,7 +21,8 @@
       "Remote access guidance",
       "Simulator and physical-device integration",
       "Device interface registration",
-      "Connection troubleshooting"
+      "Connection troubleshooting",
+      "Speech-reactive avatar guidance"
     ],
     "websiteURL": "https://github.com/Aglit-AI/aglit-plugin",
     "supportURL": "https://github.com/Aglit-AI/aglit-plugin/issues",
