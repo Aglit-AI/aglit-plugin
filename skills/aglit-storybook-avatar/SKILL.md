@@ -13,6 +13,8 @@ The shared format contract is GIF/image/VRM, with optional `talkingUrl`, `sprite
 
 Reuse the existing Codex voice harness. Do not create another microphone, TTS service, provider account, or conversation. Mouth movement follows confirmed assistant output, never microphone input. Voice selection is cosmetic and applies at the next call. Web/mobile clients connected to a host use that host's capabilities; phone-local tool availability must be checked separately.
 
+Customization must fork user-owned assets and preserve all existing animation frames. Author neutral, smiling/Happy, frowning and surprised defaults, plus idle/looking, listening and thinking variants alongside speech; read the guide for editing and event-binding requirements. Do not claim unsupported automatic state transitions.
+
 ## GIF authoring and mouth quality
 
 For the detailed asset process, read [the GIF and mouth guide](references/gif-mouth-authoring.md).
