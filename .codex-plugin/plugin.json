@@ -1,7 +1,7 @@
 {
   "name": "aglit-plugin",
-  "version": "0.3.4",
-  "description": "Connect computers and device interfaces through Aglit, and author transparent GIF avatars with speech-reactive mouths on compatible runtimes.",
+  "version": "0.4.0",
+  "description": "Connect devices through Aglit, set up private-network Agentic Dev Swarm development with visual dev PR proof, and author speech-reactive avatars.",
   "author": {
     "name": "Aglit"
   },
@@ -12,8 +12,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Aglit Plugin",
-    "shortDescription": "Connect computers and device interfaces",
-    "longDescription": "Set up and connect to supported computers through Aglit. Enroll an Apple silicon Mac or Windows x64 PC, discover physical phones and simulators through compatible original-host adapters, configure simulator input, and register vendor-app or localhost device control interfaces. Device actions require an authenticated tool connection and an installed runtime exposing the documented schema. This instruction-only plugin does not install the CLI, drivers, or native runtime, create an MCP connection, or grant device trust. First-time sign-in and OS permissions retain their normal handoffs. Private SSH remains conditional on compatible macOS runtime support. Includes a storybook-avatar skill for transparent GIF authoring, mouth calibration, scoped GIF/image/VRM replacement, voice/background selection and actual-product verification. Avatar actions require the installed p1_avatar schema; this does not add Live2D support or grant microphone access.",
+    "shortDescription": "Devices, private dev swarms and avatars",
+    "longDescription": "Set up and connect to supported computers through Aglit. Enroll an Apple silicon Mac or Windows x64 PC, discover physical phones and simulators through compatible original-host adapters, configure simulator input, and register vendor-app or localhost device control interfaces. Device actions require an authenticated tool connection and an installed runtime exposing the documented schema. This instruction-only plugin does not install the CLI, drivers, or native runtime, create an MCP connection, or grant device trust. First-time sign-in and OS permissions retain their normal handoffs. Private SSH remains conditional on compatible macOS runtime support. Includes a storybook-avatar skill for transparent GIF authoring, mouth calibration, scoped GIF/image/VRM replacement, voice/background selection and actual-product verification. Avatar actions require the installed p1_avatar schema; this does not add Live2D support or grant microphone access. Agentic Dev Swarm Setup explains a one-device or private-network development topology, verifies actual hot reload, and publishes one dev branch with code-linked before/after images or video in a rolling PR. Rebase merges require user approval. No VPN, device trust or production deployment is installed or granted by this instruction-only skill.",
     "developerName": "Aglit",
     "category": "Developer Tools",
     "capabilities": [
@@ -22,7 +22,8 @@
       "Simulator and physical-device integration",
       "Device interface registration",
       "Connection troubleshooting",
-      "Speech-reactive avatar guidance"
+      "Speech-reactive avatar guidance",
+      "Private-network development and visual PR review"
     ],
     "websiteURL": "https://github.com/Aglit-AI/aglit-plugin",
     "supportURL": "https://github.com/Aglit-AI/aglit-plugin/issues",
@@ -31,7 +32,8 @@
     "defaultPrompt": [
       "Help me connect to my Office Mac through Aglit.",
       "Set up my Windows PC for remote access through Aglit.",
-      "Help me register a simulator or printer control interface through Aglit."
+      "Help me register a simulator or printer control interface through Aglit.",
+      "Set up an Agentic Dev Swarm with private hot reload and before/after proof in one dev PR."
     ]
   }
 }

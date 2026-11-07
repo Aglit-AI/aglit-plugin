@@ -1,6 +1,6 @@
 {
   "name": "aglit-plugin",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "license": "MIT",
   "icon": "./assets/aglit.png",
   "author": {
@@ -19,7 +19,11 @@
     "device-control",
     "avatars",
     "gif",
-    "voice"
+    "voice",
+    "development",
+    "hmr",
+    "tailscale",
+    "agentic-dev-swarm"
   ],
-  "description": "Connect computers and device interfaces through Aglit, and author transparent GIF avatars with speech-reactive mouths on compatible runtimes."
+  "description": "Connect devices through Aglit, set up private-network Agentic Dev Swarm development with visual dev PR proof, and author speech-reactive avatars."
 }

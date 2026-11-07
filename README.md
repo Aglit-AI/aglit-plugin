@@ -4,6 +4,16 @@ Connect to your supported computers through Aglit, then discover and register th
 
 Start with the [connection guide](skills/aglit-connect-devices/references/connection-guide.md) for computer enrollment. Use the [device integration guide](skills/aglit-connect-devices/references/device-integration.md) for physical iPhone/Android devices, simulator keyboard setup, and registering a vendor app or localhost interface such as a printer controller. The [agent skill](skills/aglit-connect-devices/SKILL.md) routes Claude Code or Codex to the relevant procedure.
 
+## Agentic Dev Swarm Setup (0.4.0)
+
+Use [Agentic Dev Swarm](skills/agentic-dev-swarm/SKILL.md) for development on one device or multiple authorized devices over an existing company private network or Tailscale. The agent first explains hosts, services, private URLs, what can hot reload and what requires a native rebuild, then verifies actual edit-to-screen updates on every claimed device.
+
+Work accumulates on one `dev` branch with frequent pushes and one rolling PR. Review code links alongside real before/after screenshots, and comparable recordings/timings for slowness or interactions. The skill includes a [media-rich PR template](skills/agentic-dev-swarm/assets/pull-request-template.md) with before/after tables, recordings, timing context and regression results. Evidence belongs in the PR, not extra status documents. User-approved merges use rebase-and-merge with individual commits preserved. No per-feature branch bookkeeping or cross-chat status loops.
+
+Example: "Use $agentic-dev-swarm to start private development on my laptop and test phone, verify hot reload, and publish a dev PR with before/after proof."
+
+For standalone Codex loading, install/copy `skills/agentic-dev-swarm` into the configured skills directory. Both plugin manifests discover it under `skills/`. This is reusable guidance, not an automatic VPN installer or a completed development session. Device/network enrollment, authentication, native builds and production publication retain their authorization boundaries. Package validation does not establish a new multi-device HMR or feature E2E run.
+
 ## Install in Claude Code
 
 Run inside Claude Code:

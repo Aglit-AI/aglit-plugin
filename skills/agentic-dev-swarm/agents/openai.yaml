@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agentic Dev Swarm Setup"
+  short_description: "Private-network HMR and visual dev-branch reviews"
+  default_prompt: "Use $agentic-dev-swarm to set up local development across my authorized devices, verify hot reload, and publish a dev PR with before/after proof."

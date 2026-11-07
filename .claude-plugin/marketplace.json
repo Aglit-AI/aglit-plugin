@@ -1,7 +1,7 @@
 {
   "name": "aglit",
   "metadata": {
-    "description": "Aglit skills for computer access, device integration, and speech-reactive storybook avatars."
+    "description": "Aglit skills for device access, Agentic Dev Swarm development, visual PR proof and speech-reactive avatars."
   },
   "owner": {
     "name": "Aglit"
@@ -10,7 +10,7 @@
     {
       "name": "aglit-plugin",
       "source": "./",
-      "description": "Connect computers and device interfaces through Aglit, and author transparent GIF avatars with speech-reactive mouths on compatible runtimes."
+      "description": "Connect devices through Aglit, set up private-network Agentic Dev Swarm development with visual dev PR proof, and author speech-reactive avatars."
     }
   ]
 }
