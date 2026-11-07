@@ -1,44 +1,23 @@
 # Rolling dev PR
 
-Keep the PR description brief: batch purpose, actual acceptance limits, and optional bullet links to proof comments. No shared overview table is required. Use the change section below in one self-contained comment per coherent change; each owner updates their own comment. Putting proof in the overview is also allowed, without duplicating it in both places.
+Keep the overview short with optional links to individual proof comments. Each owner updates one comment per coherent change. Use the compact format below; normally 100-200 words of explanation excluding media. Replace all placeholders. Use the canonical ticket ID, otherwise the native chat ID, and a real workflow-provided URL. If none exists, write the exact ID and “task link unavailable”; never invent a ticket or URL.
 
-## Change: screen and visible behavior
+## [TASK_ID](TASK_URL) — screen / change
 
-**Why:** concrete problem and resulting behavior.
+**Change:** one sentence explaining the problem and result. **Code:** commit/diff link.
 
-**Code:** exact file/diff links and commit(s).
+| Before — source/build | After — source/build |
+|---|---|
+| ![Before: screen](ACTUAL_BASELINE_ATTACHMENT_URL) | ![After: screen](ACTUAL_UPDATED_ATTACHMENT_URL) |
 
-**Try it:** authorized dev entrypoint and a few actions with expected visible results. Exclude private tokens.
+**Recording:** actual playable attachment for animation, navigation, slowness or other multi-step behavior. Include comparable before/after clips and observed timings for performance claims. Otherwise explain briefly why still images suffice.
 
-### Before
+**Tested:** revision/build · device/platform · date · verified source binding.
 
-Embed the actual baseline screenshot here, followed by its source/build, device, viewport and state. If unavailable, say **Not captured**; do not invent a baseline.
+**E2E:** requested action → observed result; relevant persistence/reconnect and adjacent regression result. State pass/fail/not run explicitly.
 
-### After
+**Limits:** concrete remaining failures, missing baseline/video or untested devices. Missing evidence means **unfinished**, not accepted. Old-revision media and local paths do not qualify as current proof.
 
-Embed the actual updated screenshot here with comparable source/build/device/state labels. Use supported attachment URLs and verify the image renders in the published comment. Asset previews and mockups are not runtime proof.
+Keep table rows on single Markdown lines. Put prose, videos and lists outside cells; escape literal pipes. Do not manufacture a missing baseline or replay an uncertain mutation. Preserve private information and authentication/approval handoffs.
 
-### Interaction or performance recording
-
-Embed a playable recording when stills cannot establish the behavior: animation, navigation, loading, reconnect or multi-step interactions. For a performance comparison, include actual before and after recordings of the same action and workload, observed timing, device/network, cold/warm state, measurement method and limitations. No source-only speedup claims. If missing, say **Not captured / not accepted** and identify the actual blocker.
-
-### Actual E2E
-
-**Tested source/build/device/date:** exact revision, original platform and verified served source or native build.
-
-- **Requested flow:** actions and observed result, with image/video evidence.
-- **Adjacent regressions:** relevant layout, focus, navigation or scrolling and actual results.
-- **Persistence/reconnect:** relevant save/reopen/reconnect result, or explain why not applicable.
-- **HMR:** observed edit-to-screen adoption and auth/state continuity on each claimed device.
-
-Builds, syntax checks, health and mocks do not establish product acceptance.
-
-### Status and limits
-
-**Verified / in progress / blocked:** distinguish implementation from actual acceptance. List missing media, failed flows, untested devices and exact external dependencies. Keep private details out of captures and PR text. Use the current harness's native input tool for a concrete missing user answer or user-only action; final prose saying blocked does not create Needs input. Keep resource waits distinct.
-
-Keep evidence in this PR and supported attachments/storage, not new proof/status documents. Default-branch merge and production deployment remain separate actions.
-
-### Before calling this delivered
-
-Open this published comment. Verify the actual attachments load/play, name the tested revision/device, and cover the requested behavior. Link this exact comment in the final delivery reply. A local file path or textual summary is not uploaded proof. Missing required evidence or failed acceptance means **unfinished**, even when code is committed and pushed. Upload partial proof during validation rather than saving all attachments for the end.
+Before delivery, open this published comment and verify attachments load/play and demonstrate the named behavior/source/device. Link this exact proof comment in the final response. Upload useful partial captures during validation, not only at the end. Builds/health/text claims are not E2E. Use native request-input for a concrete user-only blocker; retain resource waits as resource waits. No new proof/status documents, automatic merge or production deployment.
