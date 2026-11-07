@@ -1,7 +1,7 @@
 {
   "name": "aglit",
   "metadata": {
-    "description": "Aglit skills for computer access and device integration."
+    "description": "Aglit skills for computer access, device integration, and speech-reactive storybook avatars."
   },
   "owner": {
     "name": "Aglit"
@@ -10,7 +10,7 @@
     {
       "name": "aglit-plugin",
       "source": "./",
-      "description": "Connect computers through Aglit and integrate phones, simulators, and device control interfaces with compatible runtimes."
+      "description": "Connect computers and device interfaces through Aglit, and author transparent GIF avatars with speech-reactive mouths on compatible runtimes."
     }
   ]
 }
