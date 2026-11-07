@@ -1,12 +1,14 @@
 # Rolling dev review
 
-Use this in the one rolling dev PR. Keep this index short; link each screen to its evidence comment. Replace example fields before publishing. If evidence is unavailable, write **Not captured / not accepted** with the actual blocker, not a dummy URL or a checked box.
+Use this as the DESCRIPTION of the one rolling dev PR: the overview at the top of its Conversation tab. Keep the index short and link each screen to its change heading in this same description. Embed actual images/videos and concise E2E results below; links to proof comments alone are insufficient. Comments may contain supporting diagnostics. Preserve other owners' sections and re-read the overview after every update. Replace example fields before publishing. If evidence is unavailable, write **Not captured / not accepted** with the actual blocker, not a dummy URL or a checked box.
 
 | Screen / change | Changed code and commits | Visual evidence | E2E status |
 |---|---|---|---|
-| Screen name and changed behavior | File/diff permalink and commit | Link to the change comment below | Verified / in progress / blocked |
+| Screen name and changed behavior | File/diff permalink and commit | Same-description change heading with embedded media below | Verified / in progress / blocked |
 
 ## Change: screen and user-visible behavior
+
+Repeat this section in the PR description for each changed screen or coherent flow. Use a stable descriptive heading so other owners can preserve it.
 
 **Why:** concrete problem and expected result.
 

@@ -4,7 +4,7 @@ Connect to your supported computers through Aglit, then discover and register th
 
 Start with the [connection guide](skills/aglit-connect-devices/references/connection-guide.md) for computer enrollment. Use the [device integration guide](skills/aglit-connect-devices/references/device-integration.md) for physical iPhone/Android devices, simulator keyboard setup, and registering a vendor app or localhost interface such as a printer controller. The [agent skill](skills/aglit-connect-devices/SKILL.md) routes Claude Code or Codex to the relevant procedure.
 
-## Agentic Dev Swarm Setup (0.4.1)
+## Agentic Dev Swarm Setup (0.4.2)
 
 Use [Agentic Dev Swarm](skills/agentic-dev-swarm/SKILL.md) for development on one device or multiple authorized devices over an existing company private network or Tailscale. The agent first explains hosts, services, private URLs, what can hot reload and what requires a native rebuild, then verifies actual edit-to-screen updates on every claimed device.
 
