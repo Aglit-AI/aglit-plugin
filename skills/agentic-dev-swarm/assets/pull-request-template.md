@@ -38,3 +38,7 @@ Builds, syntax checks, health and mocks do not establish product acceptance.
 **Verified / in progress / blocked:** distinguish implementation from actual acceptance. List missing media, failed flows, untested devices and exact external dependencies. Keep private details out of captures and PR text. Use the current harness's native input tool for a concrete missing user answer or user-only action; final prose saying blocked does not create Needs input. Keep resource waits distinct.
 
 Keep evidence in this PR and supported attachments/storage, not new proof/status documents. Default-branch merge and production deployment remain separate actions.
+
+### Before calling this delivered
+
+Open this published comment. Verify the actual attachments load/play, name the tested revision/device, and cover the requested behavior. Link this exact comment in the final delivery reply. A local file path or textual summary is not uploaded proof. Missing required evidence or failed acceptance means **unfinished**, even when code is committed and pushed. Upload partial proof during validation rather than saving all attachments for the end.

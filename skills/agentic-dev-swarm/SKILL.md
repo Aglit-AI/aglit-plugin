@@ -7,6 +7,10 @@ description: Set up development on one device or multiple authorized devices ove
 
 Deliver an inspectable edit-to-screen loop: one shared `dev` branch, one rolling PR to the actual default branch, and real visual/E2E proof in that PR. This skill supplies instructions, not a network, credentials or runtime.
 
+## Refresh instructions on resumption
+
+At task start/resumption, and when explicitly told instructions changed, re-read the authoritative repository's current development rules, this skill and its proof template. Discover the current open rolling PR. Do not assume an already-running chat automatically received a file update, or that an old prompt/PR still defines delivery. This refresh does not authorize cross-chat messages.
+
 ## Explain the setup before startup
 
 Inspect repository instructions, existing dev commands, devices, live services and authorized access. Tell the user which checkout/device owns source; which devices run the UI/API/mobile clients; what services, private URLs/listeners or projections will start or be reused; and what remains running for review. Explain which edits HMR, which need a controlled restart, and which native/dependency changes need an authorized build/sign/install. Do not promise every edit can hot reload.
@@ -51,6 +55,16 @@ Put each UI change entry in its owner's proof comment using the bundled template
 Use supported attachments or existing evidence storage with appropriate access. Keep credentials/private account state out of PRs, media, source and logs. Redact sensitive portions without obscuring the tested behavior. Do not add acceptance/status/ownership/proof-plan files to docs just to show activity. Genuine product/developer documentation may change when needed. Report already-merged implementation's validation in the existing PR instead of manufacturing code changes. Nonvisual work needs appropriate behavioral evidence; documentation-only work needs no invented UI proof.
 
 Continue fixing and exercising the actual product until changes are pushed and the PR has reviewable real E2E proof. Open the published proof comment (or overview, if used) and verify its images render, videos play and source/device/result labels are present. A successful upload or API edit receipt alone does not verify presentation. Syntax, mocks, builds and health checks alone are insufficient. For a genuine external dependency/auth/approval blocker, preserve work, identify the exact blocker and partial result in the PR, and continue independent authorized work. If remaining progress requires a concrete user answer or user-only action, use the current harness's native request-input tool and keep the question pending; a final prose blocked or question does not create Needs input. Resource waits use supported recovery/waiting without inventing user questions. Preserve native approvals. Read owner-authorized private credential instructions before requesting PINs/passwords; use only the exact original device/service credential through the permitted transport. Never guess or bypass handoffs. Do not wait for user review after delivering a tested result.
+
+## Completion requires published evidence
+
+Pushing code is a work-in-progress checkpoint, not delivery. Capture the baseline before changing a UI when feasible. Once the first relevant visible behavior has been exercised, upload its actual capture in that validation phase and update the owner's proof comment; do not defer every attachment until a large feature or build finishes. Label partial results and failures honestly, and retain the exact tested revision/device. Never stage a convenient unrelated screen as proof.
+
+Before claiming completion, check the requested outcomes against actual product runs, then open the current PR and inspect the owner's published evidence. Required images must be embedded and accessible, required interaction videos playable, and the changed behavior/source/device identified. Local paths, text-only assertions, build logs, prior-revision media and promises to upload do not satisfy that check. Reuse existing proof when it still applies; do not manufacture extra changes, duplicate comments or require a video for nonvisual instruction-only work.
+
+The final delivery reply links directly to the owner's proof comment and states what actually passed plus any remaining limits. If required acceptance or media is missing, keep the work unfinished; do not use completed/ready/verified language or close the task merely because the code was pushed. Continue independent authorized recovery. Use native request-input for a concrete missing user answer or user-only action, preserving original approvals. Resource/dependency waits use the supported waiting state and retain unfinished work; do not invent a question to make them appear user-blocked. If an unavoidable yield is necessary, explicitly report partial delivery and the exact missing acceptance rather than imply completion.
+
+In a workflow experiment or supervisory role, report which owner omitted proof. Do not silently upload it for them and then count that as their compliance. A user-authorized rescue upload must be attributed and does not establish that the original agent followed the convention. This is a required workflow check, not a claim that the harness mechanically enforces attachments.
 
 ## Rebase merges and consolidation
 
