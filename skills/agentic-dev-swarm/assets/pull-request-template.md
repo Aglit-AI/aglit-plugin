@@ -1,63 +1,40 @@
-# Rolling dev review
+# Rolling dev PR
 
-Use this as the DESCRIPTION of the one rolling dev PR: the overview at the top of its Conversation tab. Keep the index short and link each screen to its change heading in this same description. Embed actual images/videos and concise E2E results below; links to proof comments alone are insufficient. Comments may contain supporting diagnostics. Preserve other owners' sections and re-read the overview after every update. Replace example fields before publishing. If evidence is unavailable, write **Not captured / not accepted** with the actual blocker, not a dummy URL or a checked box.
+Keep the PR description brief: batch purpose, actual acceptance limits, and optional bullet links to proof comments. No shared overview table is required. Use the change section below in one self-contained comment per coherent change; each owner updates their own comment. Putting proof in the overview is also allowed, without duplicating it in both places.
 
-| Screen / change | Changed code and commits | Visual evidence | E2E status |
-|---|---|---|---|
-| Screen name and changed behavior | File/diff permalink and commit | Same-description change heading with embedded media below | Verified / in progress / blocked |
+## Change: screen and visible behavior
 
-## Change: screen and user-visible behavior
+**Why:** concrete problem and resulting behavior.
 
-Repeat this section in the PR description for each changed screen or coherent flow. Use a stable descriptive heading so other owners can preserve it.
+**Code:** exact file/diff links and commit(s).
 
-**Why:** concrete problem and expected result.
+**Try it:** authorized dev entrypoint and a few actions with expected visible results. Exclude private tokens.
 
-**Code:** exact changed-file/diff links and relevant commit(s).
+### Before
 
-**Try it:** existing authorized dev entrypoint, a few actions, and the expected visible result. Do not include private tokens.
+Embed the actual baseline screenshot here, followed by its source/build, device, viewport and state. If unavailable, say **Not captured**; do not invent a baseline.
 
-### Before and after
+### After
 
-Capture the same screen, viewport/device, account state and interaction point. Use actual product captures; asset previews and mockups are not runtime proof.
+Embed the actual updated screenshot here with comparable source/build/device/state labels. Use supported attachment URLs and verify the image renders in the published comment. Asset previews and mockups are not runtime proof.
 
-| Before | After |
-|---|---|
-| Embed the baseline screenshot here | Embed the updated screenshot here |
-| Baseline source/build and capture context | Updated source/build and capture context |
+### Interaction or performance recording
 
-Use Markdown images, for example `![Before: settings panel](ATTACHMENT_URL)` and `![After: settings panel](ATTACHMENT_URL)`, replacing each URL with the actual supported attachment/evidence URL. Verify previews render for the reviewer. Do not leave example URLs in a submitted entry.
+Embed a playable recording when stills cannot establish the behavior: animation, navigation, loading, reconnect or multi-step interactions. For a performance comparison, include actual before and after recordings of the same action and workload, observed timing, device/network, cold/warm state, measurement method and limitations. No source-only speedup claims. If missing, say **Not captured / not accepted** and identify the actual blocker.
 
-### Recordings for interactions or slowness
+### Actual E2E
 
-Required when still images cannot establish the behavior: animation, focus/navigation, multi-step interactions, loading, reconnect, or performance claims. Otherwise state why static proof is sufficient.
+**Tested source/build/device/date:** exact revision, original platform and verified served source or native build.
 
-**Before recording:** attach/embed the actual baseline video using the host's supported video attachment flow.
+- **Requested flow:** actions and observed result, with image/video evidence.
+- **Adjacent regressions:** relevant layout, focus, navigation or scrolling and actual results.
+- **Persistence/reconnect:** relevant save/reopen/reconnect result, or explain why not applicable.
+- **HMR:** observed edit-to-screen adoption and auth/state continuity on each claimed device.
 
-**After recording:** attach/embed the updated video of the same action and comparable state. Verify playback; an inaccessible filesystem path is not an embedded recording.
-
-| Observation | Before | After |
-|---|---|---|
-| Action / workload | Same defined action | Same defined action |
-| Time from stated trigger to visible completion | Observed time, or not measured | Observed time, or not measured |
-| Device / network / viewport | Actual conditions | Actual conditions |
-| Cache / warm-up | Cold or warm and how established | Comparable state, or explain difference |
-
-State measurement method, repetitions and limitations. Do not infer speed from source changes or advertise incomparable runs as an improvement.
-
-### Actual E2E and regression check
-
-**Tested:** source commit/build, original device/platform, app/browser version when relevant, private origin/source binding, and date.
-
-| Scenario | Action | Observed result | Evidence |
-|---|---|---|---|
-| Requested behavior | Actual user action | Passed / failed / not run, with concrete result | Image/video or appropriate runtime evidence |
-| Adjacent UI regression | Relevant navigation, layout, focus, scrolling or other affected behavior | Actual result | Capture/recording where useful |
-| Persistence / restart / reconnect | Relevant save/reopen/reconnect action, or explain not applicable | Actual result | Evidence |
-
-For a live-source setup, show one observed edit-to-screen update and auth/state continuity on every device claimed to support HMR. A successful build, HTTP health check, mock or isolated asset preview is not full acceptance.
+Builds, syntax checks, health and mocks do not establish product acceptance.
 
 ### Status and limits
 
-**Review status:** verified / in progress / blocked. List missing before/after captures, untested devices, failed flows and exact external handoffs. Never mark complete while required evidence is missing.
+**Verified / in progress / blocked:** distinguish implementation from actual acceptance. List missing media, failed flows, untested devices and exact external dependencies. Keep private details out of captures and PR text. Use the current harness's native input tool for a concrete missing user answer or user-only action; final prose saying blocked does not create Needs input. Keep resource waits distinct.
 
-Keep evidence in the PR and approved attachments/storage, with private details excluded or appropriately redacted. Add repository documentation only when the product or developer workflow genuinely needs durable instructions. Default-branch merge and production deployment are not implied by this record.
+Keep evidence in this PR and supported attachments/storage, not new proof/status documents. Default-branch merge and production deployment remain separate actions.

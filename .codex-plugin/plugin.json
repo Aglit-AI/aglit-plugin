@@ -1,6 +1,6 @@
 {
   "name": "aglit-plugin",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Connect devices through Aglit, set up private-network Agentic Dev Swarm development with visual dev PR proof, and author speech-reactive avatars.",
   "author": {
     "name": "Aglit"
