@@ -112,3 +112,8 @@ URL-encode IDs. The path identifies the native control runtime; `employeeId` ide
 Use the deployment's actual Console base or returned `employeeUrl`, including for Dev/self-hosted instances. Never hard-code a production domain or put tokens, access codes, credentials, or private transport addresses in a viewer link. The link still requires normal sign-in, device trust, and assignment checks. It does not create a chat turn or boot a device.
 
 Collapsed views show selection and expansion; expand before input or custom actions. If registration, playback, input, or camera access fails, report the failing step and observed runtime/schema. Installing this documentation does not update a native runtime, supply missing drivers, or prove end-to-end control.
+
+
+## Development channels and host resource admission
+
+Before starting simulators/emulators or installing Dev/Staging, follow [simulator development](simulator-development.md). It covers shared-host active-device budgeting, source-only protected XCTest approval, architecture and channel checks, TestFlight readiness, guarded Metro reloads and proxy/ADB/RSD boundaries. The policy is agent-enforced admission guidance; current discovery/input adapters are not a hard device-count limiter.

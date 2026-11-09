@@ -31,3 +31,12 @@ Exercise the feature after the edit on each claimed device, recording source/bui
 - [Serve CLI](https://tailscale.com/docs/reference/tailscale-cli/serve): current syntax and mappings.
 
 These explain tools, not this user's enrollment/permissions or a successful multi-device session.
+
+
+## Mobile channels, resource admission and update proof
+
+Use [simulator development](../../aglit-connect-devices/references/simulator-development.md) for the shared-host manual CPU/RAM budget, protected source-helper handoffs, genuine simulator versus device/TestFlight artifacts and separate Dev/Staging registrations. Existing active devices across both iOS and Android share one host budget; physical phones and shutdown registrations are not active emulator instances. Do not start another runtime without the existing atomic host reservation and fresh resource check. This is documented agent policy, not a claim that the current runtime implements a boot limiter.
+
+Distinguish Vite HMR, React Native Fast Refresh and a periodic admitted full-bundle reload. In an Aglit development shell, a native-compatible full bundle polled with dev=false/hot=false is not Fast Refresh. Verify the actual compiled native fingerprint, exact reviewed compatibility layer, canonical JavaScript source, API/auth origin and callbacks before adoption. Keep the existing producer and strict rejection of unqualified native changes. Verify an actual receiving-client adoption, not only Metro health or an open WebSocket. Staging must not silently load the Dev producer or a default localhost Debug bundle.
+
+HTTP reverse proxy, SOCKS, exact-serial ADB reverse and Apple RSD are distinct transports. Use installed supported paths; never infer device trust from network reachability or invent a generic RSD/proxy configuration. Preserve existing routes and validate page, API and live-update traffic independently.

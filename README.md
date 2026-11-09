@@ -4,7 +4,7 @@ Connect to your supported computers through Aglit, then discover and register th
 
 Start with the [connection guide](skills/aglit-connect-devices/references/connection-guide.md) for computer enrollment. Use the [device integration guide](skills/aglit-connect-devices/references/device-integration.md) for physical iPhone/Android devices, simulator keyboard setup, and registering a vendor app or localhost interface such as a printer controller. The [agent skill](skills/aglit-connect-devices/SKILL.md) routes Claude Code or Codex to the relevant procedure.
 
-## Agentic Dev Swarm Setup (0.4.5)
+## Agentic Dev Swarm Setup (0.4.6)
 
 Use [Agentic Dev Swarm](skills/agentic-dev-swarm/SKILL.md) for development on one device or multiple authorized devices over an existing company private network or Tailscale. The agent first explains hosts, services, private URLs, what can hot reload and what requires a native rebuild, then verifies actual edit-to-screen updates on every claimed device.
 
@@ -42,6 +42,10 @@ For Claude Code, load this folder using `claude --plugin-dir /absolute/path/to/a
 For Codex skill testing, copy `skills/aglit-connect-devices` into the configured Codex skills directory, then start a new session and ask to use `$aglit-connect-devices`. The `.codex-plugin/plugin.json` manifest also packages the skill for local plugin distribution; follow the current host's local marketplace installation flow.
 
 This is an instruction-only package. It does not install the Aglit CLI automatically, declare an MCP endpoint, or connect a chat to a user's computer by itself. The target-side Aglit enrollment and account authentication remain necessary.
+
+## Device setup revision (0.4.6)
+
+The [simulator development guide](skills/aglit-connect-devices/references/simulator-development.md) adds conservative configurable shared-host admission policy, protected XCTest recovery for compatible source installations, genuine Dev/Staging and TestFlight readiness, strict native-compatible Metro reload proof, and proxy/ADB/RSD boundaries. Numerical budgets are manual agent policy, not implemented runtime hard caps or measured safe maxima. This documentation release does not ship adapters or establish a new live-device acceptance run.
 
 ## Publication status
 

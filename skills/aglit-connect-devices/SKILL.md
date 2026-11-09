@@ -11,6 +11,7 @@ Distinguish the **controller**, the **original control host**, the **employee**,
 
 - For computer enrollment, Console access, or conditional private SSH between Macs, read [the connection guide](references/connection-guide.md). Its CLI examples were checked against `@aglit-ai/cli` 1.0.17488; inspect the installed help before using another version.
 - For physical phones, existing or new simulators, or registering a printer/drone/other device, read [the device integration guide](references/device-integration.md). It includes discovery, input setup, the shared interface, registration examples, and viewer URLs.
+- For simulator resource admission, protected XCTest recovery, genuine Dev/Staging distribution and compatible Metro updates, read [simulator development](references/simulator-development.md). Apply its shared-host manual admission policy before starting a device; it does not claim runtime hard caps.
 - For an existing registration, reuse its exact employee/device identity instead of enrolling a duplicate.
 
 Computer installer support and peripheral adapter support are separate. The documented computer installer targets Apple silicon macOS and Windows x64 with a compatible Desktop release. iOS/Android peripherals run through their supported original host adapters; this does not establish standalone phone or arbitrary IoT runtime enrollment.
