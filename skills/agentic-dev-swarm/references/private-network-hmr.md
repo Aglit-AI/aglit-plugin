@@ -2,6 +2,9 @@
 
 Use when development spans devices/private proxies. Inspect installed tools and repository configuration before choosing settings. This guide does not authorize network enrollment or company policy changes.
 
+
+For self-hosted Aglit, use the default outbound relay when each computer and phone can reach the company's HTTPS account server over the cloud network, VPC, or VPN. Only that server needs an HTTPS proxy and DNS name. For environments that explicitly use Tailscale device transport, the server advertises the tailnet and the Desktop app creates and verifies its private Serve route during Anywhere Access enrollment. See the Connect devices skill's connection guide for the custom DNS and TLS commands.
+
 ## Smallest useful topology
 
 - One device: reuse loopback dev/watch services and the existing app/browser profile.

@@ -1,5 +1,46 @@
 # Aglit device connection guide
 
+
+## Self-hosted account server and private networking
+
+Use the company Aglit HTTPS address in **Account server** on Desktop or **Use a company server** on Mobile. A saved choice overrides the app's environment default. Use the same server on the computers and phones that should share an account.
+
+For most cloud, VPC, and VPN deployments, leave the server on its default outbound relay. Put one HTTPS reverse proxy or load balancer in front of the server's loopback listener. Desktops connect to that endpoint after the user enables Anywhere Access and completes OS approval. Phones connect to the same endpoint. There are no per-computer DNS records or inbound listeners in relay mode.
+
+On a server release with transport discovery, operators can set `AGLIT_APP_ORIGIN=https://aglit.example.com` and `AGLIT_DEVICE_TRANSPORT_PROVIDER=relay|cloudflare|tailscale|custom`. Cloudflare and custom VPN/VPC deployments use an operator-configured device HTTPS hostname template. The network operator can publish a private CNAME to a reachable hostname, or an A/AAAA record for an address. The HTTPS certificate must cover the hostname the Aglit server actually uses.
+
+For Tailscale device transport, enable MagicDNS and HTTPS certificates for the tailnet. Set `AGLIT_TAILSCALE_DOMAIN` to the tailnet's actual `.ts.net` suffix. Sign in to Tailscale on the server and each participating desktop using the normal installation flow. Allow the Aglit server to reach the desktops on the advertised Serve port. On a compatible Desktop, enable Anywhere Access. The app configures a private Serve listener, registers its address with the server, and refreshes it automatically. An incompatible listener on the same port or missing local Serve permission appears as a setup error.
+
+For a custom **account server** hostname such as `aglit.example.com`, add an A/AAAA record in your private DNS zone pointing to the Aglit reverse proxy's tailnet address. Configure that zone's nameserver as a restricted nameserver in [Tailscale DNS](https://tailscale.com/docs/reference/dns-in-tailscale). Install a TLS certificate valid for the custom name on the proxy. Tailscale Serve's own certificate covers the MagicDNS hostname.
+
+On the server host, run:
+
+```sh
+tailscale up
+tailscale status
+tailscale ip -4
+```
+
+If you use Caddy for the custom hostname, install its certificate and key on the proxy, then use a site block like this:
+
+```caddyfile
+aglit.example.com {
+    tls /etc/aglit/tls/fullchain.pem /etc/aglit/tls/privkey.pem
+    reverse_proxy 127.0.0.1:59090
+}
+```
+
+Validate and start the proxy with `caddy validate --config /etc/caddy/Caddyfile` and `caddy run --config /etc/caddy/Caddyfile`, or reload the existing Caddy service after validation.
+
+After setting the private DNS record and starting the HTTPS proxy, check from another enrolled tailnet device:
+
+```sh
+dig +short aglit.example.com
+curl --fail https://aglit.example.com/health
+```
+
+On a desktop, `tailscale serve status` can confirm the app created the listener. Verify Anywhere Access from a second device by opening the enrolled desktop and completing its usual verification. Repeat after restarting the desktop app to confirm recovery.
+
 ## What connects to what
 
 Install Aglit Computer Use on each supported computer you want to reach. Setup registers that computer to your signed-in Aglit account and enables Anywhere Access. Connect through Aglit Console using that account. Repeat enrollment on each additional target; use distinct names such as “Office Mac” and “Home PC”.
