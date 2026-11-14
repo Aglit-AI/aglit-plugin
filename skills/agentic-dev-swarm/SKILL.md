@@ -75,3 +75,7 @@ Archive the exact old tip and publish only with an exact remote lease and compar
 Merge only the user-approved batch using rebase-and-merge, preserving individual commits; no squash or auto-merge. Never rewrite the default branch. Reconcile dev after changed merge commit IDs, preserve remaining work and open the next rolling PR when needed. Remove unwanted code through explicit corrective commits. Dev/proof publication is not production deployment.
 
 Return private dev entrypoints, the rolling PR, observed edit-to-screen behavior per device and remaining limits. Keep intended review services running; release task-owned input/locks and stop only unneeded task-owned helpers. Skill publication, HMR setup, feature acceptance, merge and deployment are distinct results.
+
+## Pipelines
+
+When defining or reviewing package Pipelines, read [Pipeline conventions](references/pipeline-conventions.md) for stage names, workflows, platform lanes, cache reuse, and release gates.
